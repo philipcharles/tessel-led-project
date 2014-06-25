@@ -1,0 +1,110 @@
+[
+  {
+    "content": {
+      "image": "../img/usd-symbol.png"
+    },
+    "grid_w": 1,
+    "grid_h": 1
+  },
+  {
+    "content": {
+      "text": "USD",
+      "text": 593.010000000000
+    },
+    "grid_w": 1,
+    "grid_h": 2
+  },
+  {
+    "content": {
+      "text": "SLL",
+      "text": 18050.000000000000
+    },
+    "grid_w": 1,
+    "grid_h": 2
+  },
+  {
+    "content": {
+      "text": "CAD",
+      "text": 104.970000000000
+    },
+    "grid_w": 1,
+    "grid_h": 2
+  },
+  {
+    "content": {
+      "image": "../img/eur-symbol.png"
+    },
+    "grid_w": 1,
+    "grid_h": 1
+  },
+  {
+    "content": {
+      "text": "EUR",
+      "text": 308.010920000000
+    },
+    "grid_w": 1,
+    "grid_h": 2
+  },
+  {
+    "content": {
+      "text": "NMC",
+      "text": 340.677950000000
+    },
+    "grid_w": 1,
+    "grid_h": 2
+  },
+  {
+    "content": {
+      "image": "../img/usd-symbol.png"
+    },
+    "grid_w": 1,
+    "grid_h": 1
+  },
+  {
+    "content": {
+      "text": "USD",
+      "text": 593.010000000000
+    },
+    "grid_w": 1,
+    "grid_h": 2
+  },
+  {
+    "content": {
+      "text": "SLL",
+      "text": 18050.000000000000
+    },
+    "grid_w": 1,
+    "grid_h": 2
+  },
+  {
+    "content": {
+      "text": "CAD",
+      "text": 104.970000000000
+    },
+    "grid_w": 1,
+    "grid_h": 2
+  },
+  {
+    "content": {
+      "image": "../img/eur-symbol.png"
+    },
+    "grid_w": 1,
+    "grid_h": 1
+  },
+  {
+    "content": {
+      "text": "EUR",
+      "text": 308.010920000000
+    },
+    "grid_w": 1,
+    "grid_h": 2
+  },
+  {
+    "content": {
+      "text": "NMC",
+      "text": 340.677950000000
+    },
+    "grid_w": 1,
+    "grid_h": 2
+  }
+]

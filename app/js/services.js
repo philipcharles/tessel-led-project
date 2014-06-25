@@ -6,4 +6,12 @@
 // Demonstrate how to register services
 // In this case it is a simple value service.
 angular.module('myApp.services', []).
-  value('version', '0.1');
+	factory('ledAPIservice', function($http){
+		var ledAPI = {},
+
+		ledAPI.getData = function(APIpath){
+			return $http.get(APIpath);
+		}
+
+		return ledAPI;
+	});

@@ -2,10 +2,18 @@
 
 /* Controllers */
 
-angular.module('myApp.controllers', [])
-  .controller('MyCtrl1', ['$scope', function($scope) {
+angular.module('myApp.controllers', []).
+	controller('ledCtrl', function($scope, ledAPIservice) {
+		$scope.ledData = [];
+		// API URL path
+		$scope.APIpath = "../api-examples/bitcoin.json";
 
-  }])
-  .controller('MyCtrl2', ['$scope', function($scope) {
+		// Overview section
+		ledAPIservice.getData(APIpath).success(function(response){
+			$scope.ledData = response;
 
-  }]);
+			// angular.forEach($scope.ledData, function(value, key){
+				
+			// });
+		});
+	});
