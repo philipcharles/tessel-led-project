@@ -7,7 +7,7 @@
 // In this case it is a simple value service.
 angular.module('myApp.services', []).
 	factory('ledAPIservice', function($http){
-		var ledAPI = {},
+		var ledAPI = {};
 
 		ledAPI.getData = function(APIpath){
 			return $http.get(APIpath);
