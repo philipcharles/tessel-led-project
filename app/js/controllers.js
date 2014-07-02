@@ -3,41 +3,36 @@
 /* Controllers */
 
 angular.module('myApp.controllers', []).
-	controller('ledCtrl', function($scope, $log, ledAPIservice) {
-		$scope.ledData = [];
+	controller('ledCtrl', function($scope, $log, $sce, ledAPIservice) {
 		// API URL path
 		var APIpath = "api-examples/bitcoin-api.json";
 
 		// Overview section
 		ledAPIservice.getData(APIpath).success(function(response){
-			$scope.ledData = response;
+			var gridTable = "";
 
 			angular.forEach(response, function(v, k){
-				var gridTable = "",
-					gridData = [];
+				var gridRows = "",
+					gridCols = "";
 
-				angular.forEach(response[k].content, function(datacontent, type){
-					gridData.push(datacontent);
-					$log.log(datacontent);
-				});
+				for(var i=0;i<response[k].grid_h;i++){
+					gridCols = "";
+					for(var j=0;j<response[k].grid_w;j++){
+						if(response[k].content.type[i+j] == "image"){
+							gridCols += "<td><img src="+response[k].content.data[i+j]+" height='"+document.getElementById('led-inner-block').offsetHeight+"' /></td>";
+						}else{
+							var textheight = (document.getElementById('led-inner-block').offsetHeight/response[k].grid_h)-2;
+							gridCols += "<td style='color:"+response[k].content.textcolor[i+j]+";font-size:"+textheight+"px;line-height:"+textheight+"px;'>"+response[k].content.data[i+j]+"</td>";
+						}
+					};
+					gridRows += "<tr>"+gridCols+"</tr>";
+				};
 
-				$log.log(gridData);
+				gridTable += "<table>"+gridRows+"</table>";
 
-				// for(var i=0;i<response[k].grid_h;i++){
-				// 	var gridRows = "<tr>";
-
-				// 	for(var j=0;j<response[k].grid_w;i++){
-						
-				// 	}
-				// }
-
-				// angular.forEach(response[k], function(value, key){
-				// 	if(key="grid_h"){
-				// 		for(i=0;i<value;i++){
-				// 			for(j=0;j<)
-				// 		};
-				// 	};
-				// });
 			});
+			$scope.ledData = function(){
+				return $sce.trustAsHtml(gridTable);
+			};
 		});
 	});

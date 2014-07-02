@@ -5,7 +5,8 @@
 angular.module('myApp', [
   'ngRoute',
   'myApp.services',
-  'myApp.controllers'
+  'myApp.controllers',
+  'ngSanitize'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.
