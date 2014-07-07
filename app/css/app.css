@@ -26,6 +26,17 @@ body {
   color: #FFF;
   height: 100px;
   width: 9999px;
+  position: relative;
+}
+#led-inner-block ul {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  list-style: none;
+}
+#led-inner-block ul li {
+  float: left;
+  height: 100%;
 }
 #led-inner-block table {
   height: 100%;

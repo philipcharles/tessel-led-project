@@ -1,7 +1,11 @@
 <div id="page">
-	<div class="led-panel-holder">
+	<div class="led-panel-holder" ng-controller="tickerCtrl">
 		<div class="led-gallery-holder">
-			<div id="led-inner-block" ng-bind-html="ledData()"></div>
+			<div id="led-inner-block">
+				<ul>
+					<li find-width ng-repeat="table in tableList track by $index" ng-bind-html="ledData(table)" class="animating"></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </div>

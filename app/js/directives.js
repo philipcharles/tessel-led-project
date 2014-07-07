@@ -4,8 +4,13 @@
 
 
 angular.module('myApp.directives', []).
-  directive('appVersion', ['version', function(version) {
+  directive('findWidth', function($document, $timeout, $log) {
     return function(scope, elm, attrs) {
-      elm.text(version);
+    	$timeout(function(){
+	    	var elementwidth = elm[0].offsetWidth;
+	    	scope.$watch('elementwidth', function(){
+		    	scope.elmwidth.push(elementwidth);
+	    	});
+    	}, 500);
     };
-  }]);
+  });
