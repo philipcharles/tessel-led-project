@@ -25,21 +25,43 @@ body {
   background: #000;
   color: #FFF;
   height: 100px;
-  width: 9999px;
   position: relative;
+  overflow: hidden;
 }
 #led-inner-block ul {
   padding: 0;
   margin: 0;
   height: 100%;
   list-style: none;
+  white-space: nowrap;
+  float: left;
 }
 #led-inner-block ul li {
-  float: left;
+  display: inline-block;
   height: 100%;
 }
 #led-inner-block table {
   height: 100%;
   float: left;
   margin: 0 10px 0 0;
+}
+.animating {
+  -webkit-animation: scrolling infinite 10s linear;
+  animation: scrolling infinite 10s linear;
+}
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+@-webkit-keyframes scrolling {
+  0% {
+    -webkit-transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-50%);
+  }
 }
