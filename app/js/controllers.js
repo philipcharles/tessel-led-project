@@ -6,7 +6,7 @@ angular.module('myApp.controllers', []).
 	controller('ledCtrl', function($scope, $sce, ledAPIservice) {
 		// API URL path
 		var APIpath = "api-examples/bitcoin-api.json";
-			$scope.tableList = [];
+		$scope.tableList = [];
 
 		// Overview section
 		ledAPIservice.getData(APIpath).success(function(response){
